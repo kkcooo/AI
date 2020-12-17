@@ -25,7 +25,18 @@
           <property Method="Self.HoverBotAgent::DoChase()" />
           <property ResultOption="BT_INVALID" />
         </node>
-        <node class="Action" id="11">
+      </node>
+      <node class="Sequence" id="11">
+        <node class="Condition" id="12">
+          <property Operator="Equal" />
+          <property Opl="Self.HoverBotAgent::GetTargetDist()" />
+          <property Opr="const float 10" />
+        </node>
+        <node class="Action" id="14">
+          <property Method="Self.HoverBotAgent::StopChase()" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="13">
           <property Method="Self.HoverBotAgent::DoAttack()" />
           <property ResultOption="BT_INVALID" />
         </node>
